@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="about-box">
+    <h2>Prediction Analytics</h2>
+
+    {% if total_points == 0 %}
+        <p>No data yet. Make some predictions first 🙂</p>
+    {% else %}
+        <p>Scatter plot of Living Area (sqft) vs Predicted Price.</p>
+        <canvas id="scatterChart" style="margin-top:20px;"></canvas>
+    {% endif %}
+</div>
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const scatterData = {{ scatter_points | tojson }};
+
+    if (scatterData.length > 0) {
+        const ctx = document.getElementById('scatterChart').getContext('2d');
+
+        new Chart(ctx, {
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'Area vs Price',
+                    data: scatterData,
+                    pointRadius: 5
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Living Area (sqft)'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Predicted Price (₹)'
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return '₹ ' + value.toLocaleString();
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+</script>
+
+{% endblock %}

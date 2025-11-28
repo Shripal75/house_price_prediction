@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="hero-section">
+    <div class="hero-text">
+        <div class="tag">🏡 Smart House Price Estimator</div>
+
+        <h1>
+            Discover accurate house prices <br>
+            powered by intelligent AI
+        </h1>
+
+        <p>
+            Get instant valuations, explore sample predicted homes, 
+            and estimate property value within seconds.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="/predict" class="btn-primary">Check Your House Price</a>
+            <a href="/create-account" class="btn-secondary">Create Account</a>
+        </div>
+    </div>
+
+    <div class="hero-card">
+        <h3>Today's Sample Prices</h3>
+
+        <ul>
+            <li>🏠 2BHK in Pune — <strong>₹ 58,20,000</strong></li>
+            <li>🏢 3BHK in Mumbai — <strong>₹ 1,47,00,000</strong></li>
+            <li>🏡 Duplex in Nashik — <strong>₹ 76,90,000</strong></li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
+

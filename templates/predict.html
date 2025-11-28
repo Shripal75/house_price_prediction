@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="predict-box">
+    <h2>🏡 Enter House Details</h2>
+
+    <form action="/predict" method="post" class="predict-form">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label>Overall Quality</label>
+                <input type="number" name="overall_qual" required>
+            </div>
+
+            <div class="form-group">
+                <label>Living Area (sqft)</label>
+                <input type="number" name="gr_liv_area" required>
+            </div>
+
+            <div class="form-group">
+                <label>Garage Capacity</label>
+                <input type="number" name="garage_cars" required>
+            </div>
+
+            <div class="form-group">
+                <label>Basement Area (sqft)</label>
+                <input type="number" name="total_bsmt_sf" required>
+            </div>
+
+            <div class="form-group">
+                <label>Full Bathrooms</label>
+                <input type="number" name="full_bath" required>
+            </div>
+
+            <div class="form-group">
+                <label>Year Built</label>
+                <input type="number" name="year_built" required>
+            </div>
+
+        </div>
+
+        <button class="btn-primary" type="submit">Predict Price</button>
+    </form>
+
+    {% if prediction %}
+    <div class="result-card">
+        <h3>Predicted Price:</h3>
+        <span class="price">₹ {{ "{:,.2f}".format(prediction) }}</span>
+    </div>
+    {% endif %}
+
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+</div>
+
+{% endblock %}

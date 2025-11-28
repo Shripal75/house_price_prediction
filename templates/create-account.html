@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="account-section">
+    <div class="account-left">
+        <h2>Create Account</h2>
+
+        <form class="account-form">
+            <label>Full Name</label>
+            <input type="text" placeholder="Your name">
+
+            <label>Email</label>
+            <input type="email" placeholder="your@email.com">
+
+            <label>Password</label>
+            <input type="password" placeholder="Password">
+
+            <label>Country</label>
+            <select>
+                <option>India</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+            </select>
+
+            <button class="btn-primary" type="submit">Create Account</button>
+
+            <p class="login-text">Already have an account? <a href="#">Login Here</a></p>
+        </form>
+    </div>
+
+
+    <div class="account-right"></div>
+
+
+</div>
+
+{% endblock %}

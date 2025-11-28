@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="dashboard-wrapper">
+    <aside class="sidebar">
+        <h3>Dashboard</h3>
+
+        <a href="#">Residents</a>
+        <a href="#">Visitors</a>
+        <a href="#">Society</a>
+        <a href="#">Complaints</a>
+        <a href="#">Maintenance</a>
+    </aside>
+
+    <main class="dashboard-main">
+        <h2>Residents Directory</h2>
+
+        <div class="search-section">
+            <input type="text" placeholder="Search by name or flat no.">
+            <select>
+                <option>All Wings</option>
+                <option>Wing A</option>
+                <option>Wing B</option>
+            </select>
+        </div>
+
+        <table class="table-residents">
+            <tr>
+                <th>Name</th>
+                <th>Wing</th>
+                <th>Flat</th>
+                <th>Members</th>
+                <th>Move-in Date</th>
+            </tr>
+
+            <tr><td>RTest001</td><td>A</td><td>101</td><td>4</td><td>9/27/2025</td></tr>
+            <tr><td>RTest002</td><td>B</td><td>102</td><td>4</td><td>11/4/2025</td></tr>
+            <tr><td>RTest003</td><td>C</td><td>103</td><td>5</td><td>11/4/2025</td></tr>
+        </table>
+    </main>
+</div>
+
+{% endblock %}

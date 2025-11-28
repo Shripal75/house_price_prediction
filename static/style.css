@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f3f6fa;
+}
+
+/* NAVBAR */
+.navbar {
+    background: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.nav-brand {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.nav-brand span {
+    color: #007bff;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* PAGE WRAPPER */
+.page-container {
+    padding: 40px;
+}
+
+/* HOME PAGE */
+.hero-box {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 14px;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+/* PREDICT FORM */
+.predict-box {
+    background: white;
+    padding: 40px;
+    width: 70%;
+    margin: auto;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.result-card {
+    margin-top: 20px;
+    padding: 20px;
+    background: #e8f4ff;
+    border-left: 4px solid #007bff;
+    border-radius: 8px;
+}
+
+.price {
+    font-size: 26px;
+    font-weight: 700;
+    color: #007bff;
+}
+
+.error {
+    color: red;
+    margin-top: 15px;
+}
+
+/* ABOUT PAGE */
+.about-box {
+    background: white;
+    padding: 40px;
+    width: 70%;
+    margin: auto;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.hero-section {
+    background: url("/static/bg1.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px;
+    border-radius: 18px;
+    color: white;
+    position: relative;
+    min-height: 500px;
+}
+
+/* Background overlay */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 18px;
+}
+
+.hero-text {
+    position: relative;
+    max-width: 500px;
+    z-index: 2;
+}
+
+.tag {
+    background: #c9ff94;
+    padding: 6px 12px;
+    color: #1a1a1a;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.hero-buttons {
+    margin-top: 25px;
+}
+
+.hero-card {
+    position: relative;
+    z-index: 2;
+    background: rgba(255,255,255,0.15);
+    padding: 25px;
+    border-radius: 14px;
+    width: 300px;
+    backdrop-filter: blur(6px);
+}
+
+.hero-card h3 {
+    margin-bottom: 15px;
+}
+.account-section {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.account-left {
+    width: 45%;
+    padding: 40px;
+}
+
+.account-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.account-form input,
+.account-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.login-text {
+    margin-top: 10px;
+}
+
+.account-section {
+    background: url("/static/bg2.jpg") center/cover no-repeat;
+    background-size: cover;
+}
+
+/* Previous CSS here */
+
+/* PREDICT PAGE */
+/* ... */
+
+/* ABOUT PAGE */
+/* ... */
+
+/* SCATTER CHART */
+#scatterChart {
+    max-height: 400px;
+}
+
+
+
